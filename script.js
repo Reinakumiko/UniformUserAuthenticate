@@ -1,0 +1,3 @@
+$(".loginway").click(function (){
+	
+});
