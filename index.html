@@ -11,7 +11,7 @@
 
 		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 		<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-		
+
 		<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
 		<link rel="stylesheet" href="style.css" />
 		<script src="script.js"></script>
@@ -22,30 +22,39 @@
 				<div class="panelTitle">用户登录</div>
 				<div class="panelDescption bodyDescption">登录您的管理账户</div>
 				<div class="panelContainer">
-					<div class="panelBody">
-						<div id="forum" class="panelLoginDisplay panelLoginMethod">
-							<table style="width: 100%;">
-								<tr>
-									<td class="inputCell inputTitle">用户名</td>
-									<td class="inputCell">
-										<input type="text" class="userInput inputAccount">
-									</td>
-								</tr>
-								<tr>
-									<td class="inputCell inputTitle">密码</td>
-									<td class="inputCell">
-										<input type="password" class="userInput inputPassword">
-									</td>
-								</tr>
-							</table>
-							<div class="loginControlButton">
-								<button class="loginButton loginSubmit" type="button">登录</button>
-								<button class="loginButton loginRegister" type="button">注册</button>
+					<div class="panelSlider">
+
+						<div class="panelBody">
+							<div id="forum" class="panelLoginDisplay panelLoginMethod">
+								<table style="width: 100%;">
+									<tr>
+										<td class="inputCell inputTitle">用户名</td>
+										<td class="inputCell">
+											<input type="text" class="userInput inputAccount">
+										</td>
+									</tr>
+									<tr>
+										<td class="inputCell inputTitle">密码</td>
+										<td class="inputCell">
+											<input type="password" class="userInput inputPassword">
+										</td>
+									</tr>
+								</table>
+								<div class="loginControlButton">
+									<button class="loginButton loginSubmit" type="button">登录</button>
+									<button class="loginButton loginRegister" type="button">注册</button>
+								</div>
 							</div>
 						</div>
-						<div id="weibo" class="panelLoginMethod">This is a Login method panel</div>
-						<div id="wechat" class="panelLoginMethod">This is a Login method panel</div>
-						<div id="qq" class="panelLoginMethod">This is a Login method panel</div>
+						<div class="panelBody">
+							<div id="weibo" class="panelLoginMethod">您将会被引导到登录授权页面，该账号登录只用作于身份验证。</div>
+						</div>
+						<div class="panelBody">
+							<div id="wechat" class="panelLoginMethod">您将会被引导到登录授权页面，该账号登录只用作于身份验证。</div>
+						</div>
+						<div class="panelBody">
+							<div id="qq" class="panelLoginMethod">您将会被引导到登录授权页面，该账号登录只用作于身份验证。</div>
+						</div>
 					</div>
 				</div>
 				<div class="panelFooter">
