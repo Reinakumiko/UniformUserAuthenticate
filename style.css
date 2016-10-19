@@ -14,32 +14,118 @@ button:focus {
 	margin: 100px auto;
 }
 
-.loginPanel {
-	width: 500px;
+.dialogPanel {
+	width: 400px;
 	margin: 0px auto;
 	border: 1px solid #ccc;
+	position: relative;
 }
 
-.loginPanel > .panelTitle {
+.dialogPanel > .panelTitle {
 	padding: 10px;
 	color: #333;
 	font-size: 16px;
 }
 
-.bodyDescption {
+.dialogPanel > .panelDescption {
+	margin: 0px 15px;
+}
+
+.dialogPanel > .panelContainer {
+	margin-top: 5px;
+	overflow: hidden;
+}
+
+.dialogPanel > .panelFooter {
+	border-top: 1px solid #ccc;
+	margin: 10px;
+	padding: 10px 0px 5px 0px;
+}
+
+.dialogPanel .bodyDescption {
 	color: #999;
 	font-size: 12px;
 }
 
-.loginPanel > .panelDescption {
-	margin: 0px 15px;
+.dialogPanel .panelButton {
+}
+
+.dialogPanel .panelButton::after {
+	display: table;
+	content: ' ';
+	clear: both;
+}
+
+.dialogPanel .buttonContainer {
+	display: inline-block;
+	float: right;
+}
+
+.dialogPanel .panelControlContainer {
+	cursor: pointer;
+	margin: 10px;
+	transition: .1s;
+}
+
+.dialogPanel .panelControlContainer:hover {
+	color: #f33;
+}
+
+.dialogPanel .panelControlClose {
+	text-align: center;
+	line-height: 25px;
+	vertical-align: middle;
+	display: block;
+}
+
+.dialogPanel .panelDialogButton {
+
+	margin: 0px 10px;
+	background: none;
+	border: 1px solid #ccc;
+	padding: 5px 35px;
+}
+
+.dialogPanel .dialogButtonYes {
+	color: #fff;
+	border-color: rgba(23,130,220,.8);
+	background-color: rgb(82,168,236);
+}
+
+.dialogPanel .dialogButtonYes:hover {
+	background-color: rgba(82,168,236,.8);
+}
+
+.dialogPanel .dialogButtonNo {
+
+}
+
+.dialogPanel .dialogButtonNo:hover {
+	background-color: rgba(238,238,238,.6);
+}
+
+.dialogPanel .panelDialogContainer {
+	padding: 10px 20px;
+}
+
+.loginPanel {
+	width: 500px;
+}
+
+.loginPanel > .panelTitle {
+	padding: 10px;
 }
 
 .loginPanel > .panelContainer {
-    height: 160px;
-	margin-top: 5px;
-    margin-bottom: 25px;
-	overflow: hidden;
+	width: 500px;
+	height: 160px;
+	margin-bottom: 25px;
+}
+
+.loginPanel > .panelContainer .panelSlider {
+	width: 3000px;
+	transition: .8s;
+	transform: translate3d(0px,0,0);
 }
 
 .loginPanel > .panelContainer .panelBody {
@@ -49,15 +135,9 @@ button:focus {
 	vertical-align: middle;
 }
 
-.loginPanel > .panelContainer .panelSlider {
-	width: 3000px;
-	transition: .3s;
-	transform: translate3d(0px,0,0);
-}
-
 .loginPanel > .panelContainer .panelBody .panelLoginMethod {
 	width: 350px;
-    height: 160px;
+	height: 160px;
 	padding: 10px;
 	margin: 0px auto;
 }
@@ -67,12 +147,6 @@ button:focus {
 }
 
 .loginPanel > .panelContainer .panelBody .panelLoginDisplay {
-}
-
-.panelFooter {
-	border-top: 1px solid #ccc;
-	margin: 10px;
-	padding: 5px 0px;
 }
 
 .panelFooter > .otherLoginWays > .otherLoginMethod {
@@ -163,7 +237,7 @@ button:focus {
 	color: #fff;
 	background-color: rgb(82,168,236);
 	*/
-	
+
 }
 
 .loginSubmit {
@@ -174,7 +248,7 @@ button:focus {
 
 .loginSubmit:hover {
 	background-color: rgba(82,168,236,.8);
-	
+
 	/*
 	box-shadow: 0px 0px 3px rgba(82,168,236,.8);
 	*/
@@ -182,7 +256,7 @@ button:focus {
 
 .loginRegister:hover {
 	background-color: rgba(238,238,238,.6);
-	
+
 	/*
 	border-color: rgba(99,99,99,.8);
 	box-shadow: 0px 0px 3px rgba(99,99,99,.8);
@@ -193,4 +267,40 @@ button:focus {
 	font-size: 14px;
 	font-style: normal;
 	content: 'V'
+}
+
+.dialogMessage {
+	left: 0;
+	right: 0;
+	
+	z-index: 550;
+	position: fixed;
+}
+
+.dialogMessage > .dialogMessageBody {
+	width: 400px;
+	margin: 0px auto;
+	box-shadow: 0 0px 15px rgba(0,0,0,.5);
+	background-color: #fff;
+}
+
+.dialogHide {
+	display: none;
+}
+
+.messageBoxLayout{
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	background-color: #000;
+	opacity: .3;
+
+	z-index: 500;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	transition: .3s;
 }

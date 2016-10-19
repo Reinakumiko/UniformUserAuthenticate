@@ -3,27 +3,25 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Login Interface</title>
-		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		
+		<!-- Library -->
 		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
-
-		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-
-		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-		<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
 		<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		
+		<!-- Local -->
+		<link rel="stylesheet" href="iconfont.css">
 		<link rel="stylesheet" href="style.css" />
 		<script src="script.js"></script>
 	</head>
-	<body>
+	<body style="height: 2000px;">
 		<div class="mainBody">
-			<div class="loginPanel">
+			<div class="dialogPanel loginPanel">
 				<div class="panelTitle">用户登录</div>
 				<div class="panelDescption bodyDescption">登录您的管理账户</div>
 				<div class="panelContainer">
 					<div class="panelSlider">
-
 						<div class="panelBody">
 							<div id="forum" class="panelLoginDisplay panelLoginMethod">
 								<table style="width: 100%;">
@@ -63,10 +61,34 @@
 						<div class="otherLoginMethod loginWay loginWay-Forum" data-loginway="forum"><i class="wayIcon loginIconForum" aria-hidden="true"></i>论坛账号</div>
 						<div class="otherLoginMethod loginWay loginWay-Weibo" data-loginway="weibo"><i class="wayIcon fa fa-weibo" aria-hidden="true"></i><span>微博账号</span></div>
 						<div class="otherLoginMethod loginWay loginWay-Wechat" data-loginway="wechat"><i class="wayIcon fa fa-weixin" aria-hidden="true"></i><span>微信账号</span></div>
-						<div class="otherLoginMethod loginWay loginWay-QQ" data-loginway="qq"><i class="wayIcon fa fa-qq" aria-hidden="true"></i><span>QQ账号</span></div>
+						<div class="otherLoginMethod loginWay loginWay-QQ" data-loginway="qq" data-notsupport="true"><i class="wayIcon fa fa-qq" aria-hidden="true"></i><span>QQ账号</span></div>
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="messageBox dialogHide">
+			<div class="dialogMessage">
+				<div class="dialogMessageBody">
+					<div class="dialogPanel">
+						<div class="panelControl">
+							<div class="buttonContainer panelControlContainer"><i class="iconfont icon-close panelControlClose" title="关闭窗口"></i></div>
+						</div>
+						<div class="panelTitle">发生错误</div>
+						<div class="panelDescption bodyDescption">当前功能暂不支持</div>
+						<div class="panelContainer panelDialogContainer">该登录方式当前不支持，请更换其他登录方式。</div>
+						<div class="panelFooter">
+							<div class="panelButton">
+								<div class="buttonContainer">
+									<button class="panelDialogButton dialogButtonYes" type="button">Yes</button>
+									<button class="panelDialogButton dialogButtonNo" type="button">No</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="messageBoxLayout dialogHide"></div>
 		</div>
 	</body>
 </html>
