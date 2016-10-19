@@ -5,6 +5,10 @@ $(document).ready(function (){
 
 		if(isSupport != null && isSupport == "true") {
 			MessageDialog.GetDialog().Display("发生错误", "该登录方式当前不支持，请更换其他登录方式。");
+			
+			MessageDialog.OnClickButton(function () {
+				//Do something... 
+			});
 			return;
 		}
 
@@ -24,16 +28,18 @@ function DisplayMessageDialog (title, msg) {
 }
 
 var MessageDialog = {
-	dialogCloseButton: null,
+	dialogButtonNo: null,
+	dialogButtonYes: null,
+	dialogButtonClose: null,
 	dialogElement: null,
 	dialogLayout: null,
 	isHide: true,
-	
+
 	GetDialog: function () {
-		this.dialogCloseButton = $(".panelControlClose");
+		this.panelControlButton = $(".panelControlButton");
 		this.dialogElement = $(".messageBox");
 		this.dialogLayout = $(".messageBoxLayout");
-		
+
 		return this;
 	},
 	Display: function (title, msg) {
@@ -43,27 +49,28 @@ var MessageDialog = {
 
 		panelTitle.html(title);
 		panelContainer.html(msg);
-		
-		this.dialogLayout.click(this.Hide());
-		this.dialogCloseButton.click(this.Hide());
-		
+
+		this.dialogLayout.click(function () { MessageDialog.Hide()});
+		this.panelControlButton.click(function () { MessageDialog.Hide() });
+
 
 		this.dialogLayout.show();
 		this.dialogElement.show();
-		
+
 		this.isHide = false;
-		
+
 		console.log(this);
 		console.log("show message dialog");
 	},
 	Hide: function () {
 		this.dialogLayout.hide();
 		this.dialogElement.hide();
-		
+
 		this.isHide = true;
 	},
 	Toggle: function () {
 		var obj = this.GetDialog();
 		return obj.isHide ? obj.Display() : obj.Hide();
-	}
+	},
+	OnClickButton: function(buttonName) {}
 }

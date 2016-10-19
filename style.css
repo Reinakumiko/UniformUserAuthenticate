@@ -272,20 +272,26 @@ button:focus {
 .dialogMessage {
 	left: 0;
 	right: 0;
-	
-	z-index: 550;
-	position: fixed;
-}
-
-.dialogMessage > .dialogMessageBody {
 	width: 400px;
 	margin: 0px auto;
 	box-shadow: 0 0px 15px rgba(0,0,0,.5);
 	background-color: #fff;
+	
+	z-index: 550;
+	position: relative;
+	transform: translateY(-50%);
 }
 
 .dialogHide {
 	display: none;
+}
+
+.messageBox {
+	left: 0;
+	right: 0;
+	top: 50%;
+	
+	position: absolute;
 }
 
 .messageBoxLayout{
