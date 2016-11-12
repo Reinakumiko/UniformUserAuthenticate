@@ -5,17 +5,17 @@
 		<title>Login Interface</title>
 
 		<!-- Library -->
-		<link href="//cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 		<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
-		<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-		<script src="//cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
 		<!-- Local -->
 		<link rel="stylesheet" href="iconfont.css">
 		<link rel="stylesheet" href="style.css" />
 		<script src="script.js"></script>
 	</head>
-	<body style="height: 2000px;">
+	<body>
 		<div class="mainBody">
 			<div class="dialogPanel loginPanel">
 				<div class="panelTitle">用户登录</div>
@@ -24,24 +24,20 @@
 					<div class="panelSlider">
 						<div class="panelBody">
 							<div id="forum" class="panelLoginDisplay panelLoginMethod">
-								<table style="width: 100%;">
-									<tr>
-										<td class="inputCell inputTitle">用户名</td>
-										<td class="inputCell">
-											<input type="text" class="userInput inputAccount">
-										</td>
-									</tr>
-									<tr>
-										<td class="inputCell inputTitle">密码</td>
-										<td class="inputCell">
-											<input type="password" class="userInput inputPassword">
-										</td>
-									</tr>
-								</table>
-								<div class="loginControlButton">
-									<button class="loginButton loginSubmit" type="button">登录</button>
-									<button class="loginButton loginRegister" type="button">注册</button>
+								<div class="inputCell"><input type="text" class="userInput inputAccount" placeholder="论坛账号"></div>
+								<div class="inputCell">
+								<input type="password" class="userInput inputPassword" placeholder="登录密码">
+								<a href="#" class="rightClickButton small">忘记密码</a>
+								</div>	
+
+								<div class="inputCell">
+								<button class="loginButton loginSubmit" type="button">登录</button>
 								</div>
+								<!--
+<div class="loginControlButton">
+<button class="loginButton loginRegister" type="button">注册</button>
+</div>
+-->
 							</div>
 						</div>
 						<div class="panelBody">

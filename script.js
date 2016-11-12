@@ -19,7 +19,7 @@ $(document).ready(function (){
 
 function LoginPanelSwitch(activeWay) {
 	var index = $("#"+activeWay).parent().index();
-	var offset = index * 500;
+	var offset = index * 450;
 
 	$(".panelSlider").css({"transform": "translate3d(-" + offset + "px, 0, 0)"})
 }
